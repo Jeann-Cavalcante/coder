@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Coder house</title>
+
+    <style>
+      body {
+        background-color: #333;
+        height: 100vh;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class=""></div>
+    <button>add</button>
+
+    <script>
+      var div = document.querySelector("div");
+      var button = document.querySelector("button");
+
+      var dados = ["bolo", "bombom", "chocolate", "chiclete"];
+
+      function addItem(e) {
+        const nome = prompt("qual o seu nome ?");
+
+        var divNova = document.createElement("div");
+        var conteudoNovo = document.createTextNode(nome);
+        div.appendChild(conteudoNovo);
+      }
+
+      function lista() {
+        let dadosNovos = [...dados];
+        dadosNovos.map((item) => {
+          div.innerHTML += `
+          <div>${item}</div>
+          `;
+        });
+      }
+      lista();
+
+      let reais = "R$ 15.20,20";
+      let reaisFornumber = reais.replace(",", ".");
+      let float = parseFloat(reaisFornumber.replace("R$", ""));
+
+      console.log(float * 10);
+
+      button.addEventListener("click", addItem);
+    </script>
+  </body>
+</html>
