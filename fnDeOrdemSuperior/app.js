@@ -3,14 +3,6 @@ class CorteDeCabelo {
     this.nome = nome;
     this.tipo = tipo;
     this.estilo = estilo;
-    console.log(
-      "Corte de cabelo criado!" +
-        this.nome +
-        " " +
-        this.tipo +
-        " " +
-        this.estilo
-    );
   }
 
   valorDoCorte() {
