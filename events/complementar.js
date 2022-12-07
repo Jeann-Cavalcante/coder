@@ -3,7 +3,9 @@ const footer = document.querySelector("footer");
 
 function inserindoFooter(){
   dados.forEach((item) =>{
-    footer.innerHTML += `<p>Feito por ${item.nome} - contato: ${item.contato}</p>`;
+    let p = document.createElement("p");
+    p.textContent = `Feito por ${item.nome} - contato: ${item.contato}`;
+    footer.appendChild(p);
   });
 };
 
